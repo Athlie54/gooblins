@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class MenuManager : MonoBehaviour {
     public static MenuManager Instance;
@@ -13,33 +14,39 @@ public class MenuManager : MonoBehaviour {
     }
 
     public void ShowTileInfo(Tile tile) {
-        /*
-        if (tile == null)
-        {
-            _tileObject.SetActive(false);
-            _tileUnitObject.SetActive(false);
-            return;
-        }
 
-        _tileObject.GetComponentInChildren<Text>().text = tile.TileName;
-        _tileObject.SetActive(true);
+        //Debug.Log("did it");
 
-        if (tile.OccupiedUnit) {
-            _tileUnitObject.GetComponentInChildren<Text>().text = tile.OccupiedUnit.UnitName;
-            _tileUnitObject.SetActive(true);
-        }
-        */
+        //Debug.Log(_tileObject);
+        //_tileObject.GetComponentInChildren<TextMeshProUGUI>().text = "bob";
+
+
+         if (tile == null)
+         {
+             _tileObject.SetActive(false);
+             _tileUnitObject.SetActive(false);
+             return;
+         }
+
+         _tileObject.GetComponentInChildren<TextMeshProUGUI>().text = tile.TileName;
+         _tileObject.SetActive(true);
+
+         if (tile.OccupiedUnit) {
+             _tileUnitObject.GetComponentInChildren<TextMeshProUGUI>().text = tile.OccupiedUnit.UnitName;
+             _tileUnitObject.SetActive(true);
+         }
+         
     }
 
     public void ShowSelectedHero(BaseHero hero) {
-        /*
+        
         if (hero == null) {
             _selectedHeroObject.SetActive(false);
             return;
         }
 
-        _selectedHeroObject.GetComponentInChildren<Text>().text = hero.UnitName;
+        _selectedHeroObject.GetComponentInChildren<TextMeshProUGUI>().text = hero.UnitName;
         _selectedHeroObject.SetActive(true);
-        */
+        
     }
 }
