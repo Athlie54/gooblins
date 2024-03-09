@@ -63,7 +63,9 @@ public abstract class Tile : MonoBehaviour {
             return 0;
         }
         Debug.Log("MoveUnit() started");
-        List<NodeBase> path = NodeBase.FindPath(new NodeBase(unit.OccupiedTile), new NodeBase(this));
+        //List<NodeBase> path = NodeBase.FindPath(new NodeBase(unit.OccupiedTile), new NodeBase(this));
+        List<NodeBase> path = NodeBase.FindPath(unit.OccupiedTile._position, this._position);
+
         if (path != null && path.Count <= 5)
         {
             Debug.Log($"Path found: {path.Count}");
