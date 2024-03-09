@@ -263,7 +263,7 @@ MonoBehaviour:
   _height: 10
   _grassTile: {fileID: 4569048751111950148, guid: b063a0cc35b9d3c428a38448187fa443, type: 3}
   _mountainTile: {fileID: 8731161567865230740, guid: 3ae85ab42e513544ea476c5d6e5697f4, type: 3}
-  _cam: {fileID: 0}
+  _cam: {fileID: 519420032}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
