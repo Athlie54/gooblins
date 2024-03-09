@@ -1,0 +1,1200 @@
+fileFormatVersion: 2
+guid: 5d026e5ac6ecf3144b24867b2e4f17ab
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 392
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: initial tiles FINAL_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2920
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c87bdfd37aa6b3d4881b877451113208
+      internalID: 185776030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_1
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 2920
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336a2658e2174b748a68ffef14cb6334
+      internalID: 364411816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_2
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 2920
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e13796fdcbdbb2a4e8b078fc9c74dea8
+      internalID: 1463022981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_3
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 2920
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444cff1a4c6a7674caf4798fa76543f8
+      internalID: 498981078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_4
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 2920
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70703569249c3e645b0a0db19e9b2f4f
+      internalID: -532000551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_5
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 2920
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d08c830ec45efe45a36ea09f0712a87
+      internalID: -1132785777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2528
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 756201831da62fd418c6c54dd13fb304
+      internalID: 1784855114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_7
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 2528
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1044b075097ec8d45b93f539cd44e278
+      internalID: -1845847040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_8
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 2528
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6eae8cbccafe6747a397dc43aae629c
+      internalID: 1653162642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_9
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 2528
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2183743ae7da943b7b605d8ab85716
+      internalID: 2131170506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_10
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 2528
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b9ba54663a47ce43909d03310e5e150
+      internalID: -1631703176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_11
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 2528
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9050b5a75b4ec9429c251028e28c9a1
+      internalID: 378764511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2136
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593dd5a4fa1dc45438c28b2fbc7e0551
+      internalID: 1403919786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloorTile
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 2136
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2edd5f59a5df55c46b1b84ae598df4d4
+      internalID: -1094613877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_14
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 2136
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd04b82488f6ac04e88ef2674679768e
+      internalID: 1738048261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_15
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 2136
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49bca9e82d67a7e469ec4f40ae810aec
+      internalID: -115471422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_16
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 2136
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36bf4be21f285594b9ef396e765f3f28
+      internalID: 1293561798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_17
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 2136
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5d69a1b469986449833726cdaae623
+      internalID: 1059675555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1744
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37c8e06e370336a4493a4751ffe1a625
+      internalID: 974854079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_19
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1744
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7183f4e4cfe2a3e4483249118c01547f
+      internalID: 666435819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_20
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1744
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b1cdb562d52f1f48a7132e39cca14fd
+      internalID: -1309567453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_21
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 1744
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fab222689008b841b0c8f33bd1a721c
+      internalID: -2059748862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_22
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 1744
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab557c6b45699a4a91d55d45052d487
+      internalID: -2017875031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_23
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 1744
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0f1e5837957bc4bb7709a00ffa15fc
+      internalID: -1988802725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1352
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c84b294eebe14458634cb4fef42d09
+      internalID: 822913979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_25
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1352
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ab4aeab966ec54b973a2a872f61100
+      internalID: 89718426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_26
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1352
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b04d9d13c22abc341841976dcfd5e4e3
+      internalID: -646915598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_27
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 1352
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4830e53b659dc4185779cec18c461c
+      internalID: 1908715796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_28
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 1352
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d6686352eff41459fa82f69bf17582
+      internalID: 1213830437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_29
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 1352
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c3d20147037f94499c81bb16befd35
+      internalID: -56281109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6934973757c4c5448ac094030bccb275
+      internalID: 1622936363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_31
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 960
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3d59f31c28ab2438f245ba743616f9
+      internalID: 2115056046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_32
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 960
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882df263e77479e418fc954fab09b6f2
+      internalID: 1950886057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_33
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 960
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85ea81cdcb66a5449692a45a5b5c497
+      internalID: -297697312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_34
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 960
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655b85092640ed74592532bbda4f53ba
+      internalID: 1405446888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_35
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 960
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be65fe03766a1b469dd68ae3e2b3b90
+      internalID: -844677821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 568
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d837fa30e38561f46ab01c41d1cd59ef
+      internalID: 1266950836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_37
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 568
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f155dae5711e84ba19ffc012f605c4
+      internalID: 2035357579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_38
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 568
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e130ca5271c07a747a3dfc07c3835cb5
+      internalID: 591708942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_39
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 568
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a7e533190f52f40bac1499cc640aa8
+      internalID: -1233888843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_40
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 568
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 077dcc67df3f2ae49a40bf6d97d74490
+      internalID: -620306759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_41
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 568
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f5e8630e087434cb8d1f4109b004af
+      internalID: -1734581752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f2c143b0ae25745befc82b1699f689
+      internalID: -414105907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_43
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 176
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad1176b396e1a94393f1850d7ff0b29
+      internalID: -1489503979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_44
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 176
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c732d6d6005604199ef40b2f1cde5c
+      internalID: -1662034111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_45
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 176
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382909bbd2a8c6546bcea11511cbc415
+      internalID: -1288201547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_46
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 176
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab1ffa98d89fd34d9cc2988d8a3bfd0
+      internalID: 1698493559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: initial tiles FINAL_47
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 176
+        width: 392
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701b9978d9e67274cb1cec9e65e88578
+      internalID: -298597412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -850, y: 382}
+      - {x: -854, y: 773}
+      - {x: -460, y: 775}
+      - {x: -460, y: 382}
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FloorTile: -1094613877
+      initial tiles FINAL_0: 185776030
+      initial tiles FINAL_1: 364411816
+      initial tiles FINAL_10: -1631703176
+      initial tiles FINAL_11: 378764511
+      initial tiles FINAL_12: 1403919786
+      initial tiles FINAL_14: 1738048261
+      initial tiles FINAL_15: -115471422
+      initial tiles FINAL_16: 1293561798
+      initial tiles FINAL_17: 1059675555
+      initial tiles FINAL_18: 974854079
+      initial tiles FINAL_19: 666435819
+      initial tiles FINAL_2: 1463022981
+      initial tiles FINAL_20: -1309567453
+      initial tiles FINAL_21: -2059748862
+      initial tiles FINAL_22: -2017875031
+      initial tiles FINAL_23: -1988802725
+      initial tiles FINAL_24: 822913979
+      initial tiles FINAL_25: 89718426
+      initial tiles FINAL_26: -646915598
+      initial tiles FINAL_27: 1908715796
+      initial tiles FINAL_28: 1213830437
+      initial tiles FINAL_29: -56281109
+      initial tiles FINAL_3: 498981078
+      initial tiles FINAL_30: 1622936363
+      initial tiles FINAL_31: 2115056046
+      initial tiles FINAL_32: 1950886057
+      initial tiles FINAL_33: -297697312
+      initial tiles FINAL_34: 1405446888
+      initial tiles FINAL_35: -844677821
+      initial tiles FINAL_36: 1266950836
+      initial tiles FINAL_37: 2035357579
+      initial tiles FINAL_38: 591708942
+      initial tiles FINAL_39: -1233888843
+      initial tiles FINAL_4: -532000551
+      initial tiles FINAL_40: -620306759
+      initial tiles FINAL_41: -1734581752
+      initial tiles FINAL_42: -414105907
+      initial tiles FINAL_43: -1489503979
+      initial tiles FINAL_44: -1662034111
+      initial tiles FINAL_45: -1288201547
+      initial tiles FINAL_46: 1698493559
+      initial tiles FINAL_47: -298597412
+      initial tiles FINAL_5: -1132785777
+      initial tiles FINAL_6: 1784855114
+      initial tiles FINAL_7: -1845847040
+      initial tiles FINAL_8: 1653162642
+      initial tiles FINAL_9: 2131170506
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
