@@ -55,6 +55,7 @@ public abstract class Tile : MonoBehaviour {
 
     }
 
+    // Moves given unit to this tile if possible
     public int MoveUnit(BaseUnit unit)
     {
         if (!_isWalkable)

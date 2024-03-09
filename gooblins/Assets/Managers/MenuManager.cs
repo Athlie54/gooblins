@@ -19,7 +19,7 @@ public class MenuManager : MonoBehaviour {
 
         //Debug.Log(_tileObject);
         //_tileObject.GetComponentInChildren<TextMeshProUGUI>().text = "bob";
-        /*
+        
 
          if (tile == null)
          {
@@ -35,11 +35,11 @@ public class MenuManager : MonoBehaviour {
              _tileUnitObject.GetComponentInChildren<TextMeshProUGUI>().text = tile.OccupiedUnit.UnitName;
              _tileUnitObject.SetActive(true);
          }
-         */
+         
     }
 
     public void ShowSelectedHero(BaseHero hero) {
-        /*
+        
         if (hero == null) {
             _selectedHeroObject.SetActive(false);
             return;
@@ -47,7 +47,7 @@ public class MenuManager : MonoBehaviour {
 
         _selectedHeroObject.GetComponentInChildren<TextMeshProUGUI>().text = hero.UnitName;
         _selectedHeroObject.SetActive(true);
-        */
+        
         
     }
 }
