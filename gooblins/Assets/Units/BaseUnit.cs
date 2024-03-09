@@ -6,4 +6,6 @@ public class BaseUnit : MonoBehaviour {
     public string UnitName;
     public Tile OccupiedTile;
     public Faction Faction;
+    public int MaxMovement;
+    public int Movement;
 }

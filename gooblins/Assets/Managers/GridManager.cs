@@ -7,15 +7,17 @@ using Random = UnityEngine.Random;
 
 public class GridManager : MonoBehaviour {
     public static GridManager Instance;
-    [SerializeField] private int _width, _height;
+    public static int _width, _height;
 
     [SerializeField] private Tile _grassTile, _mountainTile;
 
     [SerializeField] private Transform _cam;
 
-    private Dictionary<Vector2, Tile> _tiles;
+    public static Dictionary<Vector2, Tile> _tiles;
 
     void Awake() {
+        _width = 10;
+        _height = 10;
         Instance = this;
     }
 
@@ -26,12 +28,17 @@ public class GridManager : MonoBehaviour {
         {
             for (int y = 0; y < _height; y++) {
                 var randomTile = Random.Range(0, 6) == 3 ? _mountainTile : _grassTile;
+                // Border around outside
+                if (y == 0 || y == _height - 1 || x == 0 || x == _width - 1) {
+                    randomTile = _mountainTile;
+                }
                 var spawnedTile = Instantiate(randomTile, new Vector3(x, y), Quaternion.identity);
                 spawnedTile.name = $"Tile {x} {y}";
-
               
                 spawnedTile.Init(x,y);
+                spawnedTile._position = new Vector2Int(x, y);
 
+                Debug.Log($"Generated {spawnedTile._position}");
 
                 _tiles[new Vector2(x, y)] = spawnedTile;
             }

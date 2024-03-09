@@ -48,6 +48,8 @@ MonoBehaviour:
   UnitName: Enemy 1
   OccupiedTile: {fileID: 0}
   Faction: 1
+  MaxMovement: 0
+  Movement: 0
 --- !u!212 &-9108433187739436322
 SpriteRenderer:
   m_ObjectHideFlags: 0

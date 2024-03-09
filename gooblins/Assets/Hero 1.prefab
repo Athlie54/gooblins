@@ -48,6 +48,8 @@ MonoBehaviour:
   UnitName: Snorlax
   OccupiedTile: {fileID: 0}
   Faction: 0
+  MaxMovement: 0
+  Movement: 0
 --- !u!212 &-7903131416084162073
 SpriteRenderer:
   m_ObjectHideFlags: 0
