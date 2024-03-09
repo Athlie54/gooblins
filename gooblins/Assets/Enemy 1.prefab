@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37085617b7c41d542a5577777dc364e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitName: 
+  UnitName: Enemy 1
   OccupiedTile: {fileID: 0}
   Faction: 1
   MaxMovement: 0

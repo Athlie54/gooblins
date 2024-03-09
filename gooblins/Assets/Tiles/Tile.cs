@@ -32,7 +32,7 @@ public abstract class Tile : MonoBehaviour {
     }
 
     void OnMouseDown() {
-        if(GameManager.Instance.GameState != GameState.HeroesTurn) return;
+        //if(GameManager.Instance.GameState != GameState.HeroesTurn) return;
 
         if (OccupiedUnit != null) {
             if(OccupiedUnit.Faction == Faction.Hero) UnitManager.Instance.SetSelectedHero((BaseHero)OccupiedUnit);
