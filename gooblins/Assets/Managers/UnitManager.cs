@@ -32,6 +32,15 @@ public class UnitManager : MonoBehaviour {
         GameManager.Instance.ChangeState(GameState.SpawnEnemies);
     }
 
+    public void ResetHeroMovement()
+    {
+        foreach (ScriptableUnit h in _units.Where(u => u.Faction == Faction.Hero))
+        {
+            var hero = h.UnitPrefab;
+            hero.Movement = hero.MaxMovement;
+        }
+    }
+
     public void SpawnEnemies()
     {
         var enemyCount = 1;

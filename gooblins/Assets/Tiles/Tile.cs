@@ -66,11 +66,12 @@ public abstract class Tile : MonoBehaviour {
         //List<NodeBase> path = NodeBase.FindPath(new NodeBase(unit.OccupiedTile), new NodeBase(this));
         List<NodeBase> path = NodeBase.FindPath(unit.OccupiedTile._position, this._position);
 
-        if (path != null && path.Count <= 5)
+        if (path != null && path.Count <= unit.Movement)
         {
             Debug.Log($"Path found: {path.Count}");
             Debug.Log("Movement should be happening");
             SetUnit(unit);
+            unit.Movement -= path.Count;
         } else
         {
             if (path == null)
@@ -78,7 +79,7 @@ public abstract class Tile : MonoBehaviour {
                 Debug.Log("No path :(");
             } else
             {
-                Debug.Log($"Path too long: {path.Count}");
+                Debug.Log($"Path too long: {path.Count} ({unit.Movement})");
             }
         }
         //SetUnit(unit);
