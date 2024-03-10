@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -139,6 +140,20 @@ public class UnitManager : MonoBehaviour {
         unit.transform.position = destination.transform.position;
         destination.OccupiedUnit  = unit;
         unit.OccupiedTile = destination;
+
+        if (unit.Faction == Faction.Hero)
+        {
+            BaseHero hero = (BaseHero)unit;
+            foreach (Interactible i in destination._interactibles)
+            {
+                if (i is Gold && i.isActiveAndEnabled)
+                {
+                    hero.treasure++;
+                    //destination._interactibles.Remove(i);
+                    Object.Destroy(i.gameObject);
+                }
+            }
+        }
     }
 
     public void EnemyTurn()
