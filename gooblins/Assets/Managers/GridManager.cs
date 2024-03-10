@@ -103,8 +103,21 @@ public class GridManager : MonoBehaviour {
         foreach (var obj in levelObjectContent)
         {
             string[] data = Regex.Split(obj, ",");
+            Tile t;
             switch (int.Parse(data[2]))
             {
+                case 1:
+                    var rug = Instantiate(Resources.LoadAll<Rug>("Interactible").First());
+                    t = _tiles[new Vector2(int.Parse(data[0]), int.Parse(data[1]))];
+                    rug.transform.position = t.transform.position;
+                    t._interactibles.Add(rug);
+                    break;
+                case 2:
+                    var gold = Instantiate(Resources.LoadAll<Gold>("Interactible").First());
+                    t = _tiles[new Vector2(int.Parse(data[0]), int.Parse(data[1]))];
+                    gold.transform.position = t.transform.position;
+                    t._interactibles.Add(gold);
+                    break;
                 case 3:
                     UnitManager.Instance.SpawnEnemy("Knight", new Vector2(int.Parse(data[0]), int.Parse(data[1])));
                     break;
