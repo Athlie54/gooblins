@@ -24,6 +24,15 @@ public class BaseUnit : MonoBehaviour {
     public static void Die(BaseUnit enemy)
     {
         //called in UnitAction when enemy health == 0
+        if (enemy.Faction == Faction.Hero)
+        {
+            UnitManager.Instance.heros.Remove((BaseHero)enemy);
+        }
+        if (enemy.Faction == Faction.Enemy)
+        {
+            UnitManager.Instance.enemies.Remove((BaseEnemy)enemy);
+        }
+
         Destroy(enemy.gameObject);
     }
 }

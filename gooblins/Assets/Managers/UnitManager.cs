@@ -118,6 +118,7 @@ public class UnitManager : MonoBehaviour {
                     {
                         Debug.Log("RUG MOMENT");
                         destination = GridManager._tiles[path[i].Position];
+                        unit.Movement = 0;
                         // any other panic stuff?
                         i = -999;
                     }

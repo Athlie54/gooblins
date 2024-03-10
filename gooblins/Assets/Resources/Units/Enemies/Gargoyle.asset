@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Gargoyle
   m_EditorClassIdentifier: 
   Faction: 1
-  UnitPrefab: {fileID: 2245615452730368146, guid: cfaae509ac481c1488431dea611ada0b, type: 3}
+  UnitPrefab: {fileID: 2245615452730368146, guid: 04b0116ac4d232a449bc757c467b00b1, type: 3}
