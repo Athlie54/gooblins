@@ -53,7 +53,7 @@ MonoBehaviour:
   MaxHealth: 6
   CurrentHealth: 6
   Damage: 0
-  alertness: 1
+  alertness: 3
   partrol_length: 1
 --- !u!212 &-9108433187739436322
 SpriteRenderer:

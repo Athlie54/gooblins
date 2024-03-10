@@ -64,6 +64,24 @@ public class NodeBase
         return l;
     }
 
+    public static Vector2 ClosestAccessibleTo(Vector2 start_pos, Vector2 end_pos, int max_distance)
+    {
+        var p = FindPath(start_pos, end_pos);//list of node bases
+        if(p.Count() <= max_distance)
+        {
+            if(GridManager._tiles[end_pos].OccupiedUnit != null)
+            {
+                return p[1].Position;
+            }
+            
+            return end_pos;
+        }
+        else
+        {
+            return p[p.Count - max_distance].Position;
+        }
+    }
+
     /*
     public static List<NodeBase> FindPath(NodeBase startNode, NodeBase targetNode)
     {
@@ -206,7 +224,7 @@ public class NodeBase
 
             foreach (var neighbor in current.Neighbors())
             {
-                if (GridManager._tiles[neighbor.Position]._isWalkable && processed.Where(n => n.Position == neighbor.Position).Count() == 0)
+                if (GridManager._tiles[neighbor.Position]._isWalkable && (GridManager._tiles[neighbor.Position].OccupiedUnit == null || neighbor.Position == targetPos )&& processed.Where(n => n.Position == neighbor.Position).Count() == 0)
                 {
                     var inSearch = toSearch.Contains(neighbor);
 
@@ -227,7 +245,6 @@ public class NodeBase
                 }
             }
         }
-
         return null;
     }
 }

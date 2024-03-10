@@ -9,6 +9,7 @@ public class UnitManager : MonoBehaviour {
 
     private List<ScriptableUnit> _units;
     public List<BaseEnemy> enemies;
+    public List<BaseHero> heros; 
     public BaseHero SelectedHero;
 
     void Awake() {
@@ -32,6 +33,8 @@ public class UnitManager : MonoBehaviour {
 
             SetUnit(spawnedHero, randomSpawnTile);
             spawnedHero.OccupiedTile = randomSpawnTile;
+            heros.Add(spawnedHero);
+
         }
 
         GameManager.Instance.ChangeState(GameState.SpawnEnemies);
@@ -39,9 +42,8 @@ public class UnitManager : MonoBehaviour {
 
     public void ResetHeroMovement()
     {
-        foreach (ScriptableUnit h in _units.Where(u => u.Faction == Faction.Hero))
+        foreach (BaseHero hero in heros)
         {
-            var hero = h.UnitPrefab;
             hero.Movement = hero.MaxMovement;
         }
     }
@@ -73,6 +75,7 @@ public class UnitManager : MonoBehaviour {
         SelectedHero = hero;
         MenuManager.Instance.ShowSelectedHero(hero);
     }
+
 
     public int MoveUnit(BaseUnit unit, Tile destination)
     {
@@ -107,6 +110,12 @@ public class UnitManager : MonoBehaviour {
         return 0;
     }
 
+    public void MoveToClosestReachableTile(BaseUnit unit, Tile destination)
+    {
+        Vector2 closest_dest_tile = NodeBase.ClosestAccessibleTo(unit.OccupiedTile._position, destination._position, unit.Movement);
+        MoveUnit(unit, GridManager._tiles[closest_dest_tile]);
+    }
+
     public void SetUnit(BaseUnit unit, Tile destination)
     {
         if (unit.OccupiedTile != null) unit.OccupiedTile.OccupiedUnit = null;
@@ -131,7 +140,8 @@ public class UnitManager : MonoBehaviour {
                     break;
 
                 case (int)BaseEnemy.Alertness.In_Combat:
-                    //move attack
+
+                    MoveToClosestReachableTile(e, heros[0].OccupiedTile);//change form [0] later
                     break;
                 default:
                     Debug.Log("unexpeceted alertness");
