@@ -272,6 +272,8 @@ MonoBehaviour:
   _doorLeft: {fileID: 8898877237771052118, guid: 2b1904e90e573334c92c97124b1b68d0, type: 3}
   _doorRight: {fileID: 6219898562247167661, guid: e878e6f4f1cf2c94db189165005e68d9, type: 3}
   _cam: {fileID: 519420032}
+  level: {fileID: 4900000, guid: 6ee1c04bc235dbd4cbe6d0eed315dbaa, type: 3}
+  tileToSpawn: {fileID: 0}
 --- !u!1 &340921305
 GameObject:
   m_ObjectHideFlags: 3
