@@ -23,8 +23,9 @@ public abstract class Tile : MonoBehaviour {
     {
 
         _highlight.SetActive(true);
-        if (GameManager.Instance.GameState == GameState.HeroesTurn)
+        if (GameManager.Instance.GameState == GameState.HeroesTurn && UnitManager.Instance.SelectedHero != null)
         {
+            
             List<NodeBase> path = NodeBase.FindPath(UnitManager.Instance.SelectedHero.OccupiedTile._position, this._position);
             MenuManager.Instance.movableHighlighted = (this._isWalkable && path.Count <= UnitManager.Instance.SelectedHero.Movement);
             MenuManager.Instance.ShowTileInfo(this);
