@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class BaseEnemy : BaseUnit
 {
-    // Start is called before the first frame update
-    void Start()
+    public int alertness;
+
+    public enum Alertness 
     {
-        
+        Normal = 1,
+        On_Edge = 2,
+        In_Combat = 3
     }
 
-    // Update is called once per frame
-    void Update()
+    public virtual void Patrol()
     {
-        
+        //bool around bruh
     }
+
 }

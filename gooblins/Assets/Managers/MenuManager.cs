@@ -53,14 +53,38 @@ public class MenuManager : MonoBehaviour {
         
     }
 
-    public void EndTurn()
+    public void ToggleTurn()
     {
-        _selectedHeroObject.SetActive(false);
-        _tileObject.SetActive(false);
-        _tileUnitObject.SetActive(false);
-        _endTurnButtonObject.SetActive(false);
 
-        GameManager.Instance.ChangeState(GameState.EnemiesTurn);
+        Debug.Log("turn toggled");
+
+        if(GameManager.Instance.GameState == GameState.HeroesTurn) //switch to enemy turn
+        {
+            //toggle all ui
+            _selectedHeroObject.SetActive(false);
+            _tileObject.SetActive(false);
+            _tileUnitObject.SetActive(false);
+            _endTurnButtonObject.SetActive(false);
+            GameManager.Instance.ChangeState(GameState.EnemiesTurn);
+            UnitManager.Instance.EnemyTurn();
+        }
+        else //switch to hero turn
+        {
+            _endTurnButtonObject.SetActive(true);
+            GameManager.Instance.ChangeState(GameState.HeroesTurn);
+        }
         return;
     }
+
+    //public void EndTurn()
+    //{
+    //    _selectedHeroObject.SetActive(false);
+    //    _tileObject.SetActive(false);
+    //    _tileUnitObject.SetActive(false);
+    //    _endTurnButtonObject.SetActive(false);
+
+    //    GameManager.Instance.ChangeState(GameState.EnemiesTurn);
+    //    UnitManager.Instance.EnemyTurn();
+    //    return;
+    //}
 }

@@ -61,13 +61,13 @@ public abstract class Tile : MonoBehaviour {
             }
             else
             {
-                //if (UnitManager.Instance.SelectedHero != null)
-                //{
-                //    Debug.Log("About to move");
-                //    MoveUnit(UnitManager.Instance.SelectedHero);
-                //    Debug.Log("Successfully moved");
-                //    UnitManager.Instance.SetSelectedHero(null);
-                //}
+                if (UnitManager.Instance.SelectedHero != null)
+                {
+                    Debug.Log("about to move");
+                    UnitManager.Instance.MoveUnit(UnitManager.Instance.SelectedHero, this);
+                    Debug.Log("successfully moved");
+                    UnitManager.Instance.SelectedHero = null;
+                }
             }
         }
 

@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6793e6ebb0f0a0046a21f148c01072d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemies: []
   SelectedHero: {fileID: 0}
 --- !u!1 &224762858
 GameObject:
@@ -571,7 +572,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 224762860}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: EndTurn
+        m_MethodName: ToggleTurn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
