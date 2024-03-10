@@ -53,7 +53,8 @@ public abstract class Tile : MonoBehaviour {
                     if (UnitManager.Instance.SelectedHero != null)
                     {
                         var enemy = (BaseEnemy)OccupiedUnit;
-                        Destroy(enemy.gameObject);
+                        var hero = UnitManager.Instance.SelectedHero;
+                        hero.UnitAction(enemy, hero);
                         UnitManager.Instance.SetSelectedHero(null);
                     }
                 }
@@ -110,4 +111,5 @@ public abstract class Tile : MonoBehaviour {
         OccupiedUnit = unit;
         unit.OccupiedTile = this;
     }
+
 }

@@ -50,6 +50,9 @@ MonoBehaviour:
   Faction: 0
   MaxMovement: 5
   Movement: 0
+  MaxHealth: 0
+  CurrentHealth: 0
+  Damage: 0
 --- !u!212 &-7903131416084162073
 SpriteRenderer:
   m_ObjectHideFlags: 0

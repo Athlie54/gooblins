@@ -8,4 +8,22 @@ public class BaseUnit : MonoBehaviour {
     public Faction Faction;
     public int MaxMovement;
     public int Movement;
+    public int MaxHealth;
+    public int CurrentHealth;
+    public int Damage;
+
+    //declare action
+
+    public virtual void UnitAction(BaseEnemy enemy, BaseHero hero)
+    {
+        //set damage that hero does
+        //update enemy health
+        //destroy if health is zero
+    }
+
+    public static void Die(BaseUnit enemy)
+    {
+        //called in UnitAction when enemy health == 0
+        Destroy(enemy.gameObject);
+    }
 }
