@@ -40,6 +40,7 @@ public class CharacterSelectManager : MonoBehaviour
 
     void Awake()
     {
+        AudioManager.Instance.Play("GooblinSelect");
         Instance = this;
         _sprites = Resources.LoadAll<Sprite>("Sprites").ToList();
 

@@ -24,7 +24,8 @@ public class GridManager : MonoBehaviour {
     public Tile tileToSpawn;
 
 
-    void Awake() {
+    void Awake() 
+    {
         _width = 28;
         _height = 28;
         Instance = this;

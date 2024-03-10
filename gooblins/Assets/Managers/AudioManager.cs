@@ -6,11 +6,14 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
+    public static AudioManager Instance;
+
 
     // Start is called before the first frame update
     // Awake, on the other hand, is called just before the Start() function would be
     void Awake()
     {
+        Instance = this;
         foreach(Sound s in sounds) {
             //creates an audio source for every sound listed in the AudioManager inspector
             s.source= gameObject.AddComponent<AudioSource>();
@@ -20,7 +23,13 @@ public class AudioManager : MonoBehaviour
             // connecting the volume and pitch values for easier manipulation in the inspector
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
         }
+    }
+
+    private void Start()
+    {
+        Play("LevelMusic");
     }
 
     /* This function finds a sound with the same name as the name entered into the function parameter.

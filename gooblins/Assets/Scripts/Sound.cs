@@ -10,6 +10,8 @@ public class Sound
 
     public string name;
 
+    public bool loop;
+
     //Range makes a slider with the two parameters as either extreme
     [Range(0f,1f)]
     public float volume;

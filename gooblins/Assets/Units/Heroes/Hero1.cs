@@ -6,6 +6,7 @@ public class Hero1 : BaseHero
 {
     public override void UnitAction(BaseEnemy enemy, BaseHero hero)
     {
+        hero.Damage = 3;
         if (enemy.CurrentHealth > 0) enemy.CurrentHealth -= hero.Damage;
         if (enemy.CurrentHealth <= 0) Die(enemy);
     }

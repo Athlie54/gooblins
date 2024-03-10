@@ -13,8 +13,8 @@ public class Enemy1 : BaseEnemy
         Tile adjacent_tile = GridManager._tiles[adjacent_tile_v2];
 
 
-    Debug.Log(adjacent_tile);
-       if (-1 == UnitManager.Instance.MoveUnit(this, adjacent_tile)) //flip if run into a wall (next time go the other way)
+        Debug.Log(adjacent_tile);
+        if (-1 == UnitManager.Instance.MoveUnit(this, adjacent_tile)) //flip if run into a wall (next time go the other way)
         {
             direction *= -1;
         }
@@ -23,9 +23,17 @@ public class Enemy1 : BaseEnemy
 
     public override void UnitAction(BaseEnemy enemy, BaseHero hero)
     {
-        if (hero.CurrentHealth > 0) hero.CurrentHealth -= Damage;
-        if (hero.CurrentHealth <= 0) Die(hero);
-    }
+        if (hero.CurrentHealth > 0)
+        {
+            AudioManager.Instance.Play("GooblinDamage");
+            hero.CurrentHealth -= Damage;
+        }
+        if (hero.CurrentHealth <= 0)
+        {
+            AudioManager.Instance.Play("GooblinDie");
+            Die(hero);
+        }
+    }   
     // Start is called before the first frame update
     void Start()
     {

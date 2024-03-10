@@ -70,6 +70,7 @@ public abstract class Tile : MonoBehaviour {
                         if (hero.actionReady && ((Mathf.Abs(hero.OccupiedTile._position.x - this._position.x) + Mathf.Abs(hero.OccupiedTile._position.y - this._position.y) == 1) || 
                             (hero.name.StartsWith("Zyinks") && Mathf.Abs(hero.OccupiedTile._position.x - this._position.x) + Mathf.Abs(hero.OccupiedTile._position.y - this._position.y) <= 3)))
                         {
+                            AudioManager.Instance.Play("Zyinx!FX");
                             hero.UnitAction(enemy, hero);
                             hero.actionReady = false;
                         }
@@ -89,6 +90,7 @@ public abstract class Tile : MonoBehaviour {
 
                     if ( path.Count <= 2)
                     {
+                        AudioManager.Instance.Play("BammoFX");
                         Debug.Log("BOMBING TIME BABY");
                         this.GetComponentInChildren<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("Sprites").ToList().Where(s => s.name == "FloorTile").First();
                         this.TileName = "Exploded wall";
@@ -111,6 +113,8 @@ public abstract class Tile : MonoBehaviour {
                         if (NodeBase.FindPath(UnitManager.Instance.SelectedHero.OccupiedTile._position, _position).Count <= 3)
                         {
                             UnitManager.Instance.SelectedHero.treasure++;
+                            AudioManager.Instance.Play("KaklikFX");
+                            AudioManager.Instance.Play("Coin");
                             UnitManager.Instance.SelectedHero.actionReady = false;
 
                             Object.Destroy(this._interactibles.Where(i => i is Gold).First().gameObject);

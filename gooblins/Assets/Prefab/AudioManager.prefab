@@ -47,56 +47,79 @@ MonoBehaviour:
   sounds:
   - clip: {fileID: 8300000, guid: 8033356510815d642993cc97445ea050, type: 3}
     name: GooblinSelect
+    loop: 1
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: 9d5f6138b133e454ea2f0cab84709e0c, type: 3}
     name: LevelMusic
+    loop: 1
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: c4e9c46ee3ab3ae4e9a868e8b0e90497, type: 3}
     name: Panic
+    loop: 0
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: e0db531fa4d59cb4587fb2029d5129bd, type: 3}
     name: BammoFX
+    loop: 0
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: a2f3e334df3bc8545a9d2b6d496850a4, type: 3}
     name: DoorOpen
+    loop: 0
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: 8b1ff2e41e9deaf49bcf2292afff13a2, type: 3}
     name: Zyinx!FX
+    loop: 0
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: 668e6c5fbd0109b4497eeca21b25dc3d, type: 3}
     name: KaklikFX
+    loop: 0
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: 808b1c1bb474b2e4e81f482b61c5af1f, type: 3}
     name: Coin
+    loop: 0
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: 6750af2302e06a04283ea472a5321419, type: 3}
     name: ThudFX
+    loop: 0
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: 9dd7054d529b04d4ab71f180953b4c24, type: 3}
     name: DogBark
+    loop: 0
     volume: 1
     pitch: 0.61
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: 9dd7054d529b04d4ab71f180953b4c24, type: 3}
     name: DogBark
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: e55dade75d00a0445b30d62b5fd72307, type: 3}
+    name: GooblinDamage
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 52fb2bee1e332674182de0338a3009dd, type: 3}
+    name: GargoyleSound
+    loop: 0
     volume: 1
     pitch: 1
     source: {fileID: 0}
