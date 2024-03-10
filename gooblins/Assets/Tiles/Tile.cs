@@ -1,5 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEditorInternal;
 using UnityEngine;
 
@@ -8,6 +11,7 @@ public abstract class Tile : MonoBehaviour {
     [SerializeField] protected SpriteRenderer _renderer;
     [SerializeField] private GameObject _highlight;
     [SerializeField] public bool _isWalkable;
+    [SerializeField] private Tile _floorTile;
     public Vector2Int _position;
 
     public BaseUnit OccupiedUnit;
@@ -29,6 +33,15 @@ public abstract class Tile : MonoBehaviour {
             List<NodeBase> path = NodeBase.FindPath(UnitManager.Instance.SelectedHero.OccupiedTile._position, this._position);
             MenuManager.Instance.movableHighlighted = (this._isWalkable && path.Count <= UnitManager.Instance.SelectedHero.Movement);
             MenuManager.Instance.ShowTileInfo(this);
+
+            // bombs
+            if (UnitManager.Instance.SelectedHero.name.StartsWith("Bammo") && this is CrackTile)
+            {
+                if (path.Count == 2)
+                {
+                    // bomb possibie
+                }
+            }
         }
     }
 
@@ -61,12 +74,31 @@ public abstract class Tile : MonoBehaviour {
             }
             else
             {
+                Debug.Log(UnitManager.Instance.SelectedHero.name);
+                Debug.Log(this is CrackTile);
+                if (UnitManager.Instance.SelectedHero.name.StartsWith("Bammo") && this is CrackTile)
+                {
+                    this._isWalkable = true;
+                    List<NodeBase> path = NodeBase.FindPath(UnitManager.Instance.SelectedHero.OccupiedTile._position, this._position);
+
+                    if ( path.Count <= 2)
+                    {
+                        Debug.Log("BOMBING TIME BABY");
+                        this.GetComponentInChildren<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("Sprites").ToList().Where(s => s.name == "FloorTile").First();
+                        this._isWalkable = true;
+                    } else
+                    {
+                        this._isWalkable = false;
+                    }
+                                   
+                }
                 if (UnitManager.Instance.SelectedHero != null)
                 {
                     Debug.Log("about to move");
                     UnitManager.Instance.MoveUnit(UnitManager.Instance.SelectedHero, this);
                     Debug.Log("successfully moved");
                     UnitManager.Instance.SelectedHero = null;
+
                 }
             }
         }

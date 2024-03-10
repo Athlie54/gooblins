@@ -23,7 +23,7 @@ public class CharacterSelectManager : MonoBehaviour
     public GameObject mainName;
     public GameObject mainDesc;
 
-    public static Gooblins[] team = { Gooblins.None, Gooblins.None, Gooblins.None, };
+    public static Gooblins[] team = { Gooblins.Bammo, Gooblins.Gab, Gooblins.Skittles, };
 
     private static List<Sprite> _sprites;
 

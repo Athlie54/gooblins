@@ -29,7 +29,7 @@ public class UnitManager : MonoBehaviour {
         for (int i = 0; i < heroCount; i++) {
             var heroPrefab = _units.Where(u => u.name == CharacterSelectManager.spriteNames[ CharacterSelectManager.team[i]]).First().UnitPrefab;
             var spawnedHero = Instantiate(heroPrefab);
-            var randomSpawnTile = GridManager.Instance.GetHeroSpawnTile();
+            var randomSpawnTile = GridManager.Instance.GetHeroSpawnTile(i);
 
             SetUnit(spawnedHero, randomSpawnTile);
             spawnedHero.OccupiedTile = randomSpawnTile;

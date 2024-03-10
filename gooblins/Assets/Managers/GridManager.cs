@@ -96,8 +96,8 @@ public class GridManager : MonoBehaviour {
         GameManager.Instance.ChangeState(GameState.SpawnHeroes);
     }
 
-    public Tile GetHeroSpawnTile() {
-        Vector2 set_spawn = new Vector2(1, 1);
+    public Tile GetHeroSpawnTile(int i) {
+        Vector2 set_spawn = new Vector2(1 + i, 1);
         return _tiles[set_spawn];
 
     } //_tiles.Where(t => t.Key.x < _width / 2 && t.Value.Walkable).OrderBy(t => Random.value).First().Value;
