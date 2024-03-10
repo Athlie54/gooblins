@@ -54,13 +54,14 @@ public class UnitManager : MonoBehaviour {
 
         for (int i = 0; i < enemyCount; i++)
         {
-            var randomPrefab = GetRandomUnit<BaseEnemy>(Faction.Enemy);
-            var spawnedEnemy = Instantiate(randomPrefab);
+            //var randomPrefab = GetRandomUnit<BaseEnemy>(Faction.Enemy);
+            var knight = _units.Where(u => u.name == "Gargoyle").First().UnitPrefab;
+            var spawnedEnemy = Instantiate(knight);
             var randomSpawnTile = GridManager.Instance.GetEnemySpawnTile();
 
             SetUnit(spawnedEnemy, randomSpawnTile);
             spawnedEnemy.OccupiedTile = randomSpawnTile;
-            enemies.Add(spawnedEnemy);
+            enemies.Add((BaseEnemy)spawnedEnemy);
 
         }
 
@@ -88,8 +89,12 @@ public class UnitManager : MonoBehaviour {
         //List<NodeBase> path = NodeBase.FindPath(new NodeBase(unit.OccupiedTile), new NodeBase(this));
         List<NodeBase> path = NodeBase.FindPath(unit.OccupiedTile._position, destination._position);
 
-        if (path != null && path.Count <= unit.Movement)
+        if (path != null && path.Count <= unit.Movement )
         {
+            if(path.Count==0)
+            {
+                return -1;
+            }
             Debug.Log($"Path found: {path.Count}");
             Debug.Log("Movement should be happening");
             SetUnit(unit, destination);
@@ -100,10 +105,12 @@ public class UnitManager : MonoBehaviour {
             if (path == null)
             {
                 Debug.Log("No path :(");
+                return -1;
             }
             else
             {
                 Debug.Log($"Path too long: {path.Count} ({unit.Movement})");
+                return -1;
             }
         }
         //SetUnit(unit);
@@ -128,7 +135,7 @@ public class UnitManager : MonoBehaviour {
     {
         foreach (BaseEnemy e in enemies)
         {
-            Debug.Log($"{e}'s turn!");
+            //Debug.Log($"{e}'s turn!");
             e.Movement = e.MaxMovement;
             switch (e.alertness)
             {
@@ -141,7 +148,16 @@ public class UnitManager : MonoBehaviour {
 
                 case (int)BaseEnemy.Alertness.In_Combat:
 
-                    MoveToClosestReachableTile(e, heros[0].OccupiedTile);//change form [0] later
+                    var target = heros[0].OccupiedTile;
+                    if(e.MaxMovement != 0)
+                    {
+                        MoveToClosestReachableTile(e, target);//change form [0] later
+                    }
+                    //aka enemy next to hero
+                    if(Mathf.Abs(e.OccupiedTile._position.x - target._position.x) + Mathf.Abs(e.OccupiedTile._position.y - target._position.y) == e.range)
+                    {
+                        e.UnitAction(e, heros[0]);
+                    }
                     break;
                 default:
                     Debug.Log("unexpeceted alertness");

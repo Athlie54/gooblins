@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies: []
+  heros: []
   SelectedHero: {fileID: 0}
 --- !u!1 &224762858
 GameObject:

@@ -67,6 +67,10 @@ public class NodeBase
     public static Vector2 ClosestAccessibleTo(Vector2 start_pos, Vector2 end_pos, int max_distance)
     {
         var p = FindPath(start_pos, end_pos);//list of node bases
+        if(p.Count() == 1)
+        {
+            return start_pos;
+        }
         if(p.Count() <= max_distance)
         {
             if(GridManager._tiles[end_pos].OccupiedUnit != null)
@@ -185,7 +189,7 @@ public class NodeBase
                 }
             }
 
-            Debug.Log($"HEY THERE BUDDY!!! Current: {current.Position.x} {current.Position.y}; Target: {targetNode.Position.x} {targetNode.Position.y}");
+            //Debug.Log($"HEY THERE BUDDY!!! Current: {current.Position.x} {current.Position.y}; Target: {targetNode.Position.x} {targetNode.Position.y}");
 
             processed.Add(current);
             toSearch.Remove(current);
