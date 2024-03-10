@@ -21,35 +21,51 @@ public abstract class Tile : MonoBehaviour {
 
     void OnMouseEnter()
     {
+
         _highlight.SetActive(true);
-        MenuManager.Instance.ShowTileInfo(this);
+        if (GameManager.Instance.GameState == GameState.HeroesTurn)
+        {
+            List<NodeBase> path = NodeBase.FindPath(UnitManager.Instance.SelectedHero.OccupiedTile._position, this._position);
+            MenuManager.Instance.movableHighlighted = (this._isWalkable && path.Count <= UnitManager.Instance.SelectedHero.Movement);
+            MenuManager.Instance.ShowTileInfo(this);
+        }
     }
 
     void OnMouseExit()
     {
         _highlight.SetActive(false);
-        MenuManager.Instance.ShowTileInfo(null);
+        if (GameManager.Instance.GameState == GameState.HeroesTurn)
+        {
+            MenuManager.Instance.ShowTileInfo(null);
+        }
     }
 
     void OnMouseDown() {
         //if(GameManager.Instance.GameState != GameState.HeroesTurn) return;
-
-        if (OccupiedUnit != null) {
-            if(OccupiedUnit.Faction == Faction.Hero) UnitManager.Instance.SetSelectedHero((BaseHero)OccupiedUnit);
-            else {
-                if (UnitManager.Instance.SelectedHero != null) {
-                    var enemy = (BaseEnemy) OccupiedUnit;
-                    Destroy(enemy.gameObject);
-                    UnitManager.Instance.SetSelectedHero(null);
+        if (GameManager.Instance.GameState == GameState.HeroesTurn)
+        {
+            if (OccupiedUnit != null)
+            {
+                if (OccupiedUnit.Faction == Faction.Hero) UnitManager.Instance.SetSelectedHero((BaseHero)OccupiedUnit);
+                else
+                {
+                    if (UnitManager.Instance.SelectedHero != null)
+                    {
+                        var enemy = (BaseEnemy)OccupiedUnit;
+                        Destroy(enemy.gameObject);
+                        UnitManager.Instance.SetSelectedHero(null);
+                    }
                 }
             }
-        }
-        else {
-            if (UnitManager.Instance.SelectedHero != null) {
-                Debug.Log("About to move");
-                MoveUnit(UnitManager.Instance.SelectedHero);
-                Debug.Log("Successfully moved");
-                UnitManager.Instance.SetSelectedHero(null);
+            else
+            {
+                if (UnitManager.Instance.SelectedHero != null)
+                {
+                    Debug.Log("About to move");
+                    MoveUnit(UnitManager.Instance.SelectedHero);
+                    Debug.Log("Successfully moved");
+                    UnitManager.Instance.SetSelectedHero(null);
+                }
             }
         }
 

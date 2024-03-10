@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class MenuManager : MonoBehaviour {
     public static MenuManager Instance;
 
-    [SerializeField] private GameObject _selectedHeroObject,_tileObject,_tileUnitObject;
+    [SerializeField] private GameObject _selectedHeroObject,_tileObject,_tileUnitObject, _endTurnButtonObject;
+    public bool movableHighlighted = false;
 
     void Awake() {
         Instance = this;
@@ -28,7 +30,7 @@ public class MenuManager : MonoBehaviour {
              return;
          }
 
-         _tileObject.GetComponentInChildren<TextMeshProUGUI>().text = tile.TileName;
+         _tileObject.GetComponentInChildren<TextMeshProUGUI>().text = movableHighlighted ? $"Move to {tile.TileName}" : $"Cannot move to {tile.TileName}";
          _tileObject.SetActive(true);
 
          if (tile.OccupiedUnit) {
@@ -49,5 +51,16 @@ public class MenuManager : MonoBehaviour {
         _selectedHeroObject.SetActive(true);
         
         
+    }
+
+    public void EndTurn()
+    {
+        _selectedHeroObject.SetActive(false);
+        _tileObject.SetActive(false);
+        _tileUnitObject.SetActive(false);
+        _endTurnButtonObject.SetActive(false);
+
+        GameManager.Instance.ChangeState(GameState.EnemiesTurn);
+        return;
     }
 }
