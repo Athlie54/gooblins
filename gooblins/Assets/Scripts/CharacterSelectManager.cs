@@ -23,11 +23,11 @@ public class CharacterSelectManager : MonoBehaviour
     public GameObject mainName;
     public GameObject mainDesc;
 
-    private Gooblins[] team = { Gooblins.None, Gooblins.None, Gooblins.None, };
+    public static Gooblins[] team = { Gooblins.None, Gooblins.None, Gooblins.None, };
 
     private static List<Sprite> _sprites;
 
-    private static Dictionary<Gooblins, string> spriteNames = new Dictionary<Gooblins, string>()
+    public static Dictionary<Gooblins, string> spriteNames = new Dictionary<Gooblins, string>()
     {
         {Gooblins.Bammo, "Bammo" },
         {Gooblins.Gab, "Gab"  },

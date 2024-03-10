@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7383734281681483926}
   - component: {fileID: -7903131416084162073}
   m_Layer: 0
-  m_Name: Hero 1
+  m_Name: Bammo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,8 +28,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45,14 +45,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc6d9c8f1b0d07a48a59f8172de98d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitName: Snorlax
+  UnitName: Bammo
   OccupiedTile: {fileID: 0}
   Faction: 0
   MaxMovement: 5
   Movement: 5
-  MaxHealth: 0
-  CurrentHealth: 0
-  Damage: 0
+  MaxHealth: 6
+  CurrentHealth: 6
+  Damage: 1
 --- !u!212 &-7903131416084162073
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -94,7 +94,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 02296f7752a19ec479cb4e1cdfa13031, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
