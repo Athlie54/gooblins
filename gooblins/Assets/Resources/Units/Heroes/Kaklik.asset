@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65d0524672fd255498a91bd5005127a0, type: 3}
-  m_Name: Thud
+  m_Name: Kaklik
   m_EditorClassIdentifier: 
   Faction: 0
-  UnitPrefab: {fileID: 7383734281681483926, guid: 0074b36ceebbbed418fe3733c06cf23a, type: 3}
+  UnitPrefab: {fileID: 7383734281681483926, guid: 6b5466caf90d7d745868d46334adf0a5, type: 3}

@@ -68,7 +68,8 @@ public abstract class Tile : MonoBehaviour {
                     {
                         var enemy = (BaseEnemy)OccupiedUnit;
                         var hero = UnitManager.Instance.SelectedHero;
-                        if (hero.actionReady && (Mathf.Abs(hero.OccupiedTile._position.x - this._position.x) + Mathf.Abs(hero.OccupiedTile._position.y - this._position.y) == 1))
+                        if (hero.actionReady && ((Mathf.Abs(hero.OccupiedTile._position.x - this._position.x) + Mathf.Abs(hero.OccupiedTile._position.y - this._position.y) == 1) || 
+                            (hero.name.StartsWith("Zyinks") && Mathf.Abs(hero.OccupiedTile._position.x - this._position.x) + Mathf.Abs(hero.OccupiedTile._position.y - this._position.y) <= 3)))
                         {
                             hero.UnitAction(enemy, hero);
                             hero.actionReady = false;
@@ -103,10 +104,26 @@ public abstract class Tile : MonoBehaviour {
                 }
                 if (UnitManager.Instance.SelectedHero != null)
                 {
-                    Debug.Log("about to move");
-                    UnitManager.Instance.MoveUnit(UnitManager.Instance.SelectedHero, this);
-                    Debug.Log("successfully moved");
-                    UnitManager.Instance.SelectedHero = null;
+                    Debug.Log($"Name {UnitManager.Instance.SelectedHero.name.StartsWith("Kaklik")}");
+                    Debug.Log(this._interactibles.Any(i => i is Gold));
+                    Debug.Log(UnitManager.Instance.SelectedHero.actionReady);
+                    if (UnitManager.Instance.SelectedHero.name.StartsWith("Kaklik") && this._interactibles.Any(i => i is Gold) && UnitManager.Instance.SelectedHero.actionReady && UnitManager.Instance.SelectedHero.treasure < 3)
+                    {
+                        if (NodeBase.FindPath(UnitManager.Instance.SelectedHero.OccupiedTile._position, _position).Count <= 3)
+                        {
+                            UnitManager.Instance.SelectedHero.treasure++;
+                            UnitManager.Instance.SelectedHero.actionReady = false;
+
+                            Object.Destroy(this._interactibles.Where(i => i is Gold).First().gameObject);
+                        }
+                    }
+                    else
+                    {
+                        Debug.Log("about to move");
+                        UnitManager.Instance.MoveUnit(UnitManager.Instance.SelectedHero, this);
+                        Debug.Log("successfully moved");
+                        UnitManager.Instance.SelectedHero = null;
+                    }
 
                 }
             }
