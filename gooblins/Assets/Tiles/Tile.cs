@@ -61,55 +61,55 @@ public abstract class Tile : MonoBehaviour {
             }
             else
             {
-                if (UnitManager.Instance.SelectedHero != null)
-                {
-                    Debug.Log("About to move");
-                    MoveUnit(UnitManager.Instance.SelectedHero);
-                    Debug.Log("Successfully moved");
-                    UnitManager.Instance.SetSelectedHero(null);
-                }
+                //if (UnitManager.Instance.SelectedHero != null)
+                //{
+                //    Debug.Log("About to move");
+                //    MoveUnit(UnitManager.Instance.SelectedHero);
+                //    Debug.Log("Successfully moved");
+                //    UnitManager.Instance.SetSelectedHero(null);
+                //}
             }
         }
 
     }
 
     // Moves given unit to this tile if possible
-    public int MoveUnit(BaseUnit unit)
-    {
-        if (!_isWalkable)
-        {
-            Debug.Log("NOT WALKABLE NERD");
-            return 0;
-        }
-        Debug.Log("MoveUnit() started");
-        //List<NodeBase> path = NodeBase.FindPath(new NodeBase(unit.OccupiedTile), new NodeBase(this));
-        List<NodeBase> path = NodeBase.FindPath(unit.OccupiedTile._position, this._position);
+    //public int MoveUnit(BaseUnit unit)
+    //{
+    //    if (!_isWalkable)
+    //    {
+    //        Debug.Log("NOT WALKABLE NERD");
+    //        return 0;
+    //    }
+    //    Debug.Log("MoveUnit() started");
+    //    //List<NodeBase> path = NodeBase.FindPath(new NodeBase(unit.OccupiedTile), new NodeBase(this));
+    //    List<NodeBase> path = NodeBase.FindPath(unit.OccupiedTile._position, this._position);
 
-        if (path != null && path.Count <= unit.Movement)
-        {
-            Debug.Log($"Path found: {path.Count}");
-            Debug.Log("Movement should be happening");
-            SetUnit(unit);
-            unit.Movement -= path.Count;
-        } else
-        {
-            if (path == null)
-            {
-                Debug.Log("No path :(");
-            } else
-            {
-                Debug.Log($"Path too long: {path.Count} ({unit.Movement})");
-            }
-        }
-        //SetUnit(unit);
-        return 0;
-    }
+    //    if (path != null && path.Count <= unit.Movement)
+    //    {
+    //        Debug.Log($"Path found: {path.Count}");
+    //        Debug.Log("Movement should be happening");
+    //        SetUnit(unit);
+    //        unit.Movement -= path.Count;
+    //    } else
+    //    {
+    //        if (path == null)
+    //        {
+    //            Debug.Log("No path :(");
+    //        } else
+    //        {
+    //            Debug.Log($"Path too long: {path.Count} ({unit.Movement})");
+    //        }
+    //    }
+    //    //SetUnit(unit);
+    //    return 0;
+    //}
 
-    public void SetUnit(BaseUnit unit) {
-        if (unit.OccupiedTile != null) unit.OccupiedTile.OccupiedUnit = null;
-        unit.transform.position = transform.position;
-        OccupiedUnit = unit;
-        unit.OccupiedTile = this;
-    }
+    //public void SetUnit(BaseUnit unit) {
+    //    if (unit.OccupiedTile != null) unit.OccupiedTile.OccupiedUnit = null;
+    //    unit.transform.position = transform.position;
+        //OccupiedUnit = unit;
+    //    unit.OccupiedTile = this;
+    //}
 
 }

@@ -8,13 +8,17 @@ public class UnitManager : MonoBehaviour {
     public static UnitManager Instance;
 
     private List<ScriptableUnit> _units;
+    private List<BaseEnemy> enemies;
     public BaseHero SelectedHero;
 
     void Awake() {
         Instance = this;
 
         _units = Resources.LoadAll<ScriptableUnit>("Units").ToList();
-
+        foreach (ScriptableUnit enemy in _units.Where(u => u.Faction == Faction.Enemy))
+        {
+            enemies.Add((BaseEnemy)enemy.UnitPrefab);
+        }
     }
 
     public void SpawnHeroes() {
@@ -66,4 +70,53 @@ public class UnitManager : MonoBehaviour {
         SelectedHero = hero;
         MenuManager.Instance.ShowSelectedHero(hero);
     }
+
+    public int MoveUnit(BaseUnit unit, Tile destination)
+    {
+        if (!destination._isWalkable)
+        {
+            Debug.Log("NOT WALKABLE NERD");
+            return 0;
+        }
+        Debug.Log("MoveUnit() started");
+        //List<NodeBase> path = NodeBase.FindPath(new NodeBase(unit.OccupiedTile), new NodeBase(this));
+        List<NodeBase> path = NodeBase.FindPath(unit.OccupiedTile._position, destination._position);
+
+        if (path != null && path.Count <= unit.Movement)
+        {
+            Debug.Log($"Path found: {path.Count}");
+            Debug.Log("Movement should be happening");
+            SetUnit(unit);
+            unit.Movement -= path.Count;
+        }
+        else
+        {
+            if (path == null)
+            {
+                Debug.Log("No path :(");
+            }
+            else
+            {
+                Debug.Log($"Path too long: {path.Count} ({unit.Movement})");
+            }
+        }
+        //SetUnit(unit);
+        return 0;
+    }
+
+    //public void SetUnit(BaseUnit unit)
+    //{
+    //    if (unit.OccupiedTile != null) unit.OccupiedTile.OccupiedUnit = null;
+    //    unit.transform.position = transform.position;
+    //    OccupiedUnit = unit;
+    //    unit.OccupiedTile = this;
+    //}
+
+    //public void EnemyTurn()
+    //{
+    //    foreach(BaseEnemy e in enemies)
+    //    {
+    //        e
+    //    }
+    //}
 }

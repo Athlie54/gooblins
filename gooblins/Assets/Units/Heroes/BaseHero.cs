@@ -5,12 +5,7 @@ using UnityEngine;
 public class BaseHero : BaseUnit
 {
     //public static BaseHero Instance;
-    public override void UnitAction(BaseEnemy enemy, BaseHero hero)
-    {
-        hero.Damage = 3;
-        if (enemy.CurrentHealth > 0) enemy.CurrentHealth -= hero.Damage;
-        if (enemy.CurrentHealth <= 0) Die(enemy);
-    }
+
     // Start is called before the first frame update
     void Start()
     {
