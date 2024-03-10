@@ -46,6 +46,7 @@ public class UnitManager : MonoBehaviour {
         foreach (BaseHero hero in heros)
         {
             hero.Movement = hero.MaxMovement;
+            hero.actionReady = true;
         }
     }
 

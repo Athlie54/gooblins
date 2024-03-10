@@ -68,7 +68,12 @@ public abstract class Tile : MonoBehaviour {
                     {
                         var enemy = (BaseEnemy)OccupiedUnit;
                         var hero = UnitManager.Instance.SelectedHero;
-                        hero.UnitAction(enemy, hero);
+                        if (hero.actionReady && (Mathf.Abs(hero.OccupiedTile._position.x - this._position.x) + Mathf.Abs(hero.OccupiedTile._position.y - this._position.y) == 1))
+                        {
+                            hero.UnitAction(enemy, hero);
+                            hero.actionReady = false;
+                        }
+                        
                         UnitManager.Instance.SetSelectedHero(null);
                     }
                 }
@@ -77,7 +82,7 @@ public abstract class Tile : MonoBehaviour {
             {
                 Debug.Log(UnitManager.Instance.SelectedHero.name);
                 Debug.Log(this is CrackTile);
-                if (UnitManager.Instance.SelectedHero.name.StartsWith("Bammo") && this is CrackTile)
+                if (UnitManager.Instance.SelectedHero.name.StartsWith("Bammo") && this is CrackTile && UnitManager.Instance.SelectedHero.actionReady)
                 {
                     this._isWalkable = true;
                     List<NodeBase> path = NodeBase.FindPath(UnitManager.Instance.SelectedHero.OccupiedTile._position, this._position);
@@ -86,7 +91,10 @@ public abstract class Tile : MonoBehaviour {
                     {
                         Debug.Log("BOMBING TIME BABY");
                         this.GetComponentInChildren<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("Sprites").ToList().Where(s => s.name == "FloorTile").First();
+                        this.TileName = "Exploded wall";
                         this._isWalkable = true;
+
+                        UnitManager.Instance.SelectedHero.actionReady = false;
                     } else
                     {
                         this._isWalkable = false;

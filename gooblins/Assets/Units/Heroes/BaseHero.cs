@@ -6,6 +6,7 @@ public class BaseHero : BaseUnit
 {
     //public static BaseHero Instance;
     public int treasure;
+    public bool actionReady;
 
     // Start is called before the first frame update
     void Start()
