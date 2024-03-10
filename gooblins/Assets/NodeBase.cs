@@ -67,7 +67,7 @@ public class NodeBase
     public static Vector2 ClosestAccessibleTo(Vector2 start_pos, Vector2 end_pos, int max_distance)
     {
         var p = FindPath(start_pos, end_pos);//list of node bases
-        if(p.Count() == 1)
+        if(p == null || p.Count() == 1)
         {
             return start_pos;
         }

@@ -108,6 +108,22 @@ public class UnitManager : MonoBehaviour {
             }
             Debug.Log($"Path found: {path.Count}");
             Debug.Log("Movement should be happening");
+
+            if (unit.name.StartsWith("Skittles"))
+            {
+                Debug.Log("SKITTY MOVIN");
+                for (int i = path.Count - 1; i > 0; i--)
+                {
+                    if (GridManager._tiles[path[i].Position]._interactibles.Any(i => i is Rug) )
+                    {
+                        Debug.Log("RUG MOMENT");
+                        destination = GridManager._tiles[path[i].Position];
+                        // any other panic stuff?
+                        i = -999;
+                    }
+                }   
+            }
+
             SetUnit(unit, destination);
             unit.Movement -= path.Count;
         }
@@ -146,7 +162,7 @@ public class UnitManager : MonoBehaviour {
             BaseHero hero = (BaseHero)unit;
             foreach (Interactible i in destination._interactibles)
             {
-                if (i is Gold && i.isActiveAndEnabled)
+                if (i is Gold && (hero.treasure < 3 || hero.name.StartsWith("Gab") && hero.treasure < 5))
                 {
                     hero.treasure++;
                     //destination._interactibles.Remove(i);
