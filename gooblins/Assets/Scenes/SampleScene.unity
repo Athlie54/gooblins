@@ -262,8 +262,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56529a0777e2f69499c46fd675ce059e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _grassTile: {fileID: 4569048751111950148, guid: b063a0cc35b9d3c428a38448187fa443, type: 3}
-  _mountainTile: {fileID: 8731161567865230740, guid: 3ae85ab42e513544ea476c5d6e5697f4, type: 3}
+  _grass: {fileID: 4569048751111950148, guid: 4397e50c94b80de4f9094eb64a7e6d8d, type: 3}
+  _mountain: {fileID: 8731161567865230740, guid: 3ae85ab42e513544ea476c5d6e5697f4, type: 3}
+  _floor: {fileID: -1842748429404098888, guid: 191ef2bc10ac0e441b12aca43ce5ced8, type: 3}
+  _wall: {fileID: -2058330984653157632, guid: 10f9fe4786c98084aa6bc9a3129dd474, type: 3}
+  _crack: {fileID: -6405161648644375241, guid: 00ba251854b11e446a86ec29d244d967, type: 3}
+  _doorUp: {fileID: -4732134951383343009, guid: 257c1f4fe16ee754ab3a15ece1f9dae4, type: 3}
+  _doorDown: {fileID: -3553114167297579344, guid: 3b2d0b577bb480042b698e1c198d7135, type: 3}
+  _doorLeft: {fileID: 8898877237771052118, guid: 2b1904e90e573334c92c97124b1b68d0, type: 3}
+  _doorRight: {fileID: 6219898562247167661, guid: e878e6f4f1cf2c94db189165005e68d9, type: 3}
   _cam: {fileID: 519420032}
 --- !u!1 &340921305
 GameObject:
