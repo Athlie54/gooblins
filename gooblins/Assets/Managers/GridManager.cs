@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Unity.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -18,6 +19,7 @@ public class GridManager : MonoBehaviour {
     public static Dictionary<Vector2, Tile> _tiles;
 
     public TextAsset level;
+    public TextAsset levelObjects;
 
     public Tile tileToSpawn;
 
@@ -35,7 +37,7 @@ public class GridManager : MonoBehaviour {
         List<int> tiles = new List<int>();
 
 
-
+        // Place grid
         string[] levelContent = (level.ToString().Split(','));
         foreach (string item in levelContent)
         {
@@ -92,6 +94,28 @@ public class GridManager : MonoBehaviour {
             }
        }
         _cam.transform.position = new Vector3((float)_width / 2 - 0.5f, (float)_height / 2 - 0.5f, -10);
+
+        // Place objects
+        string[] levelObjectContent = Regex.Split(levelObjects.text, "\n");
+
+        Debug.Log($"Found {levelObjectContent.Count()} objects");
+
+        foreach (var obj in levelObjectContent)
+        {
+            string[] data = Regex.Split(obj, ",");
+            switch (int.Parse(data[2]))
+            {
+                case 3:
+                    UnitManager.Instance.SpawnEnemy("Knight", new Vector2(int.Parse(data[0]), int.Parse(data[1])));
+                    break;
+                case 4:
+                    UnitManager.Instance.SpawnEnemy("Dog", new Vector2(int.Parse(data[0]), int.Parse(data[1])));
+                    break;
+                case 5:
+                    UnitManager.Instance.SpawnEnemy("Gargoyle", new Vector2(int.Parse(data[0]), int.Parse(data[1])));
+                    break;
+            }
+        }
 
         GameManager.Instance.ChangeState(GameState.SpawnHeroes);
     }

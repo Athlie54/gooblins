@@ -68,6 +68,16 @@ public class UnitManager : MonoBehaviour {
         GameManager.Instance.ChangeState(GameState.HeroesTurn);
     }
 
+    public void SpawnEnemy(string name, Vector2 position)
+    {
+        var enemy = _units.Where(u => u.name == name).First().UnitPrefab;
+        var spawnedEnemy = Instantiate(enemy);
+
+        SetUnit(spawnedEnemy, GridManager._tiles[position]);
+        spawnedEnemy.OccupiedTile = GridManager._tiles[position];
+        enemies.Add((BaseEnemy)spawnedEnemy);
+    }
+
     private T GetRandomUnit<T>(Faction faction) where T : BaseUnit {
         return (T)_units.Where(u => u.Faction == faction).OrderBy(o => Random.value).First().UnitPrefab;
     }

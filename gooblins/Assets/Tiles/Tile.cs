@@ -12,6 +12,7 @@ public abstract class Tile : MonoBehaviour {
     [SerializeField] private GameObject _highlight;
     [SerializeField] public bool _isWalkable;
     [SerializeField] private Tile _floorTile;
+    public List<Interactible> _interactibles;
     public Vector2Int _position;
 
     public BaseUnit OccupiedUnit;
